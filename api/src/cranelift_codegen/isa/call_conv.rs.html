@@ -134,6 +134,10 @@
 <a href="#134" id="134">134</a>
 <a href="#135" id="135">135</a>
 <a href="#136" id="136">136</a>
+<a href="#137" id="137">137</a>
+<a href="#138" id="138">138</a>
+<a href="#139" id="139">139</a>
+<a href="#140" id="140">140</a>
 </pre><pre class="rust"><code><span class="kw">use </span><span class="kw">crate</span>::settings::{<span class="self">self</span>, LibcallCallConv};
 <span class="kw">use </span>core::fmt;
 <span class="kw">use </span>core::str;
@@ -151,6 +155,10 @@
     <span class="doccomment">/// Smallest caller code size, not ABI-stable.
     </span>Cold,
     <span class="doccomment">/// Supports tail calls, not ABI-stable.
+    </span><span class="comment">//
+    // Currently, this is basically sys-v except that callees pop stack
+    // arguments, rather than callers. Expected to change even more in the
+    // future, however!
     </span>Tail,
     <span class="doccomment">/// System V-style convention used on many platforms.
     </span>SystemV,
